@@ -3,7 +3,7 @@ from services.faq_service import load_faq
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 
 # Load SBERT Model
-model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
+model = SentenceTransformer("paraphrase-xlm-r-multilingual-v1")
 
 # Buat stopword remover
 stop_factory = StopWordRemoverFactory()
@@ -38,3 +38,4 @@ def get_best_answer(user_question, threshold=0.6):
         return answer[best_idx]
     else:
         return "Jika ada pertanyaan yang lebih detail bisa hubungi admin kami."
+
